@@ -1,6 +1,7 @@
 import React from "react";
 import { Button, Card, Col, Container, Row } from "react-bootstrap";
 import sharingan from "../sharingan.png";
+import Jumbotron from "./Jumbotron";
 import Slider from "./Slider";
 
 export const Home = () => (
@@ -50,5 +51,6 @@ export const Home = () => (
         </Col>
       </Row>
     </Container>
+    <Jumbotron></Jumbotron>
   </>
 );
