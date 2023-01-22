@@ -1,8 +1,8 @@
 import React from "react";
-import { Button, Card, Col, Container, Row } from "react-bootstrap";
-import sharingan from "../sharingan.png";
+import { Col, Container, Row } from "react-bootstrap";
 import Jumbotron from "./Jumbotron";
 import Slider from "./Slider";
+import { Cards } from "./Cards";
 
 export const Home = () => (
   <>
@@ -11,43 +11,13 @@ export const Home = () => (
     <Container style={{ paddingTop: "2rem", paddingBottom: "2rem" }}>
       <Row>
         <Col>
-          <Card style={{ width: "18rem" }}>
-            <Card.Img variant="top" src={sharingan} />
-            <Card.Body>
-              <Card.Title>Sharingan card</Card.Title>
-              <Card.Text>
-                Lorem ipsum, dolor sit amet consectetur adipisicing elit.
-                Blanditiis veritatis expedita illum molestias omnis.
-              </Card.Text>
-              <Button variant="dark">Learn more</Button>
-            </Card.Body>
-          </Card>
+          <Cards></Cards>
         </Col>
         <Col>
-          <Card style={{ width: "18rem" }}>
-            <Card.Img variant="top" src={sharingan} />
-            <Card.Body>
-              <Card.Title>Sharingan card</Card.Title>
-              <Card.Text>
-                Lorem ipsum, dolor sit amet consectetur adipisicing elit.
-                Blanditiis veritatis expedita illum molestias omnis.
-              </Card.Text>
-              <Button variant="dark">Learn more</Button>
-            </Card.Body>
-          </Card>
+          <Cards></Cards>
         </Col>
         <Col>
-          <Card style={{ width: "18rem" }}>
-            <Card.Img variant="top" src={sharingan} />
-            <Card.Body>
-              <Card.Title>Sharingan card</Card.Title>
-              <Card.Text>
-                Lorem ipsum, dolor sit amet consectetur adipisicing elit.
-                Blanditiis veritatis expedita illum molestias omnis.
-              </Card.Text>
-              <Button variant="dark">Learn more</Button>
-            </Card.Body>
-          </Card>
+          <Cards></Cards>
         </Col>
       </Row>
     </Container>
