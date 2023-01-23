@@ -5,7 +5,7 @@ import { Form } from "react-bootstrap";
 import Button from "react-bootstrap/Button";
 import Modal from "react-bootstrap/Modal";
 import "./Navibar.scss";
-import axios from "axios";
+import { instance } from "./utils/axiosInstance";
 
 export default function LoginPage(props) {
   const [username, setUsername] = useState("");
@@ -13,10 +13,8 @@ export default function LoginPage(props) {
   const handleSubmit = async (event) => {
     event.preventDefault();
     const userData = { username, password };
-    const user = await axios.post(
-      "http://127.0.0.1:8000/api/v1/users/login/",
-      userData
-    );
+    const user = await instance.post("api/v1/users/login/", userData);
+    console.log(user);
   };
 
   const handleClose = () => props.handleClose();
