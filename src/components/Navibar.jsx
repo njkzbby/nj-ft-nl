@@ -6,6 +6,7 @@ import { Link } from "react-router-dom";
 import "./Navibar.scss";
 import styled from "styled-components";
 import LoginPage from "./LoginPage";
+import SigninPage from "./SigninPage";
 
 const Styles = styled.div`
   a,
@@ -21,6 +22,7 @@ const Styles = styled.div`
 
 export default function NaviBar() {
   const [showLoginPage, setShowLoginPage] = useState(false);
+  const [showSigninPage, setShowSigninPage] = useState(false);
   return (
     <>
       <Styles>
@@ -49,7 +51,12 @@ export default function NaviBar() {
                 >
                   Log In
                 </Button>
-                <Button className="btn-custom" onClick={() => {}}>
+                <Button
+                  className="btn-custom"
+                  onClick={() => {
+                    setShowSigninPage(true);
+                  }}
+                >
                   Sign In
                 </Button>
               </Nav>
@@ -59,6 +66,9 @@ export default function NaviBar() {
       </Styles>
       {showLoginPage && (
         <LoginPage handleClose={() => setShowLoginPage(false)} />
+      )}
+      {showSigninPage && (
+        <SigninPage handleClose={() => setShowSigninPage(false)} />
       )}
     </>
   );
