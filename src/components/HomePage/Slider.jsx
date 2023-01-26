@@ -1,9 +1,9 @@
 import React from "react";
 import "bootstrap/dist/css/bootstrap.min.css";
 import { Carousel } from "react-bootstrap";
-import sharingans from "../sharingans.jpg";
-import renngans from "../renngans.jpg";
-import ultraeyes from "../ultraeyes.jpg";
+import sharingans from "../../sharingans.jpg";
+import renngans from "../../renngans.jpg";
+import ultraeyes from "../../ultraeyes.jpg";
 
 export default function Slider() {
   return (

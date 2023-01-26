@@ -1,11 +1,10 @@
 import React from "react";
 import { Container } from "react-bootstrap";
 import styled from "styled-components";
-import jumboimg from "../jumboimg.jpg";
 
 const Styles = styled.div`
     .jumbo {
-   background: url(${jumboimg}) no-repeat fixed bottom;
+   background: url("/assets/jumboimg.jpg") no-repeat fixed bottom;
     background-size: cover;
     color: #efefef;
     height 300px;

@@ -1,6 +1,6 @@
 import React from "react";
 import { Button, Card } from "react-bootstrap";
-import sharingan from "../sharingan.png";
+import sharingan from "../../sharingan.png";
 
 export const Cards = () => (
   <Card style={{ width: "18rem" }}>
