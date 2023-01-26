@@ -2,25 +2,25 @@ import React from "react";
 import { Col, Container, Row } from "react-bootstrap";
 import Jumbotron from "./Jumbotron";
 import Slider from "./Slider";
-import { Cards } from "./Cards";
+import { Cards } from "../Cards/Cards";
 
 export const Home = () => (
   <>
-    <Slider></Slider>
+    <Slider />
     <br />
     <Container style={{ paddingTop: "2rem", paddingBottom: "2rem" }}>
       <Row>
         <Col>
-          <Cards></Cards>
+          <Cards />
         </Col>
         <Col>
-          <Cards></Cards>
+          <Cards />
         </Col>
         <Col>
-          <Cards></Cards>
+          <Cards />
         </Col>
       </Row>
     </Container>
-    <Jumbotron></Jumbotron>
+    <Jumbotron />
   </>
 );

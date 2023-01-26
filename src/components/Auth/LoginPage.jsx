@@ -1,11 +1,10 @@
 import React from "react";
 import { useState } from "react";
-import "bootstrap/dist/css/bootstrap.min.css";
 import { Form } from "react-bootstrap";
 import Button from "react-bootstrap/Button";
 import Modal from "react-bootstrap/Modal";
-import "./Navibar.scss";
-import { instance } from "./utils/axiosInstance";
+import "../Navibar/Navibar.scss";
+import { instance } from "../utils/axiosInstance";
 
 export default function LoginPage(props) {
   const [username, setUsername] = useState("");
@@ -20,7 +19,7 @@ export default function LoginPage(props) {
   const handleClose = () => props.handleClose();
 
   return (
-    <Modal show={true} onHide={handleClose}>
+    <Modal show onHide={handleClose}>
       <Modal.Header closeButton>
         <Modal.Title>Log in</Modal.Title>
       </Modal.Header>

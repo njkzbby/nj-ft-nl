@@ -4,18 +4,23 @@ import "bootstrap/dist/css/bootstrap.min.css";
 import { Form } from "react-bootstrap";
 import Button from "react-bootstrap/Button";
 import Modal from "react-bootstrap/Modal";
-import "./Navibar.scss";
-import { instance } from "./utils/axiosInstance";
+import "../Navibar/Navibar.scss";
+import { instance } from "../utils/axiosInstance";
 
 export default function SigninPage(props) {
   const [username, setUsername] = useState("");
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
-  const [password_again, setPassword_again] = useState("");
+  const [passwordAgain, setPasswordAgain] = useState("");
 
   const handleSubmit = async (event) => {
     event.preventDefault();
-    const userData = { username, email, password, password_again };
+    const userData = {
+      username,
+      email,
+      password,
+      password_again: passwordAgain,
+    };
     const user = await instance.post("api/v1/users/register/", userData);
     console.log(user.data);
   };
@@ -61,10 +66,10 @@ export default function SigninPage(props) {
           </Form.Group>
           <Form.Group controlId="fromBasicPassword">
             <Form.Control
-              value={password_again}
+              value={passwordAgain}
               type="password"
               placeholder="Repeat password"
-              onChange={(event) => setPassword_again(event.target.value)}
+              onChange={(event) => setPasswordAgain(event.target.value)}
             />
           </Form.Group>
           <Form.Group controlId="fromBasicCheckbox">

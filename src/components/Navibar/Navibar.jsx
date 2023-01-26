@@ -5,8 +5,8 @@ import { Navbar, Nav, Button, Container } from "react-bootstrap";
 import { Link } from "react-router-dom";
 import "./Navibar.scss";
 import styled from "styled-components";
-import LoginPage from "./LoginPage";
-import SigninPage from "./SigninPage";
+import LoginPage from "../Auth/LoginPage";
+import SigninPage from "../Auth/SigninPage";
 
 const Styles = styled.div`
   a,
@@ -42,6 +42,9 @@ export default function NaviBar() {
                 </Nav.Link>
                 <Nav.Link as="div">
                   <Link to="/about"> About </Link>
+                </Nav.Link>
+                <Nav.Link as="div">
+                  <Link to="/EmailConfirm"> EmailConfirm </Link>
                 </Nav.Link>
               </Nav>
               <Nav className="justify-content-end">
