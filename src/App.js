@@ -1,10 +1,11 @@
 import React from 'react';
 import 'bootstrap/dist/css/bootstrap.min.css';
-import NaviBar from './components/Navibar';
-import { Home } from './components/Home';
-import { Users } from './components/Users';
-import { About } from './components/About';
+import NaviBar from './components/Navibar/Navibar';
+import { Home } from './components/HomePage/Home';
+import { Users } from './components/UsersPage/Users';
+import { About } from './components/AboutPage/About';
 import { BrowserRouter as Router, Routes, Route, Navigate } from 'react-router-dom';
+import { EmailConfirm } from './components/EmailConfirmPage/EmailConfirm';
 
 
 
@@ -18,8 +19,9 @@ function App() {
           <Route exact path="/" element={<Home />} />
           <Route path="/users" element={<Users />} />
           <Route path="/about" element={<About />} />
+          <Route path="/EmailConfirm/" element={<EmailConfirm />} />
           <Route
-            path="*"
+            path="/p"
             element={<Navigate to="/" replace />}
           />
         </Routes>
